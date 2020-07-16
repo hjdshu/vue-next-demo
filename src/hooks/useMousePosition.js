@@ -13,9 +13,12 @@ export default function useMousePositon () {
     window.addEventListener('mousemove', listenmove)
     console.log('mousemove init')
   })
+  
+  
   onUnmounted(() => {
     window.removeEventListener('mousemove', listenmove)
   })
+
 
   return {x, y}
 }
