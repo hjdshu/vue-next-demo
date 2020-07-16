@@ -4,18 +4,21 @@
     <p>x:{{x}}, y: {{y}}</p>
     <button @click="addhello">addhello</button>
     <HelloWorld v-if="hello" msg="Welcome to Your Vue.js App"/>
+    <Compx/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import useMousePosition from './hooks/useMousePosition'
+import Compx from './components/Compx'
 import { ref } from 'vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    Compx
   },
   setup () {
     let {x, y} = useMousePosition()
